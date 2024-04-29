@@ -91,6 +91,11 @@ ul,li{
     width: 80%;
 }
 
+#moving-header-container{
+    width: 100%;
+    overflow-x: hidden;
+}
+
 #welcome-header{
     position: relative;
     font-family: 'Cascadia Mono ExtraLight';
