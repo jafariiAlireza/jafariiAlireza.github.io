@@ -8,7 +8,7 @@ let calculateBounds = function(){
         start: -(normalLeftGap+header.offsetWidth),
         end: document.body.offsetWidth-normalLeftGap,
         step:6,
-        delay:20
+        delay:10,
     };
 }; 
 setInterval(calculateBounds,500);
