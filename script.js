@@ -7,7 +7,7 @@ let calculateBounds = function(){
     values = {
         start: -(normalLeftGap+header.offsetWidth),
         end: document.body.offsetWidth-normalLeftGap,
-        step:4,
+        step:6,
         delay:26
     };
 }; 
