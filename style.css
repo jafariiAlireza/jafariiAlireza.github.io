@@ -26,7 +26,8 @@ body .container{
     flex-wrap: nowrap;
 }
 
-@media (max-width: 900px) { 
+@media(-webkit-min-device-pixel-ratio: 2), 
+(min-resolution: 192dpi) {
     .badge {
       flex-wrap: wrap;
     }
