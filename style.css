@@ -1,20 +1,10 @@
-@font-face {
-    font-family: 'Cascadia Mono ExtraLight';
-    src: url('fonts/CascadiaMono-ExtraLight.otf');
-}
-
-@font-face {
-    font-family: 'B Nazanin';
-    src: url('fonts/BNazanin.woff');
-}
-
-*{
+* {
     box-sizing: border-box;
-    font-family: 'B Nazanin';
-    direction:rtl;
+    font-family: 'B Nazanin', sans-serif;
+    direction: rtl;
 }
-body{
-    width: 98vw;
+
+body {
     margin: 0;
     display: flex;
     flex-direction: column;
@@ -22,57 +12,50 @@ body{
     justify-content: center;
     padding: 5rem 2vw;
     overflow-x: hidden;
-    background: url('image/background.avif') center;
-    color: wheat;
+    background: linear-gradient(120deg, #3c9eff, #04259d);
+    /* Updated background gradient */
+    color: #ecf0f1;
+    /* Lighter text for contrast */
 }
 
-body .container{
-    border: 1px solid black;
+body .container {
+    border: none;
     padding: 3rem 1vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
     flex-wrap: nowrap;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    /* Added box-shadow */
 }
 
-@media(-webkit-min-device-pixel-ratio: 2), 
-(min-resolution: 192dpi) {
+@media (max-width: 900px) {
     .badge {
-      flex-wrap: wrap;
-      width: 100% !important;
+        flex-wrap: wrap;
     }
-    .badge > *{
-        width: 100% !important;
-    }
-    body{
-        width: 100vw;
-        padding-left: 0;
-        padding-right: 0;
-    }
-    body .container{
-        padding-left: 0;
-        padding-right: 0;
-    }
-    .badge .avatar{
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-  }
 
-.badge{
-    width:85%;
+    .badge>* {
+        width: 90% !important;
+    }
+}
+
+.badge {
+    width: 85%;
     direction: rtl;
     display: flex;
     justify-content: center;
     align-items: start;
     margin-bottom: 2rem;
-    /* border: 1px solid black; */
     border-radius: 2rem;
     flex: 0 0 200px;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Darker background for badge */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    /* Add shadow to the badge */
 }
 
-.badge .avatar{
+.badge .avatar {
     width: 55%;
     margin: 2rem;
     border-radius: 1rem;
@@ -80,11 +63,11 @@ body .container{
     overflow: hidden;
 }
 
-.avatar img{
+.avatar img {
     width: 100%;
 }
 
-.badge .info{
+.badge .info {
     width: 45%;
     padding-right: 2rem;
     padding-top: 1rem;
@@ -92,58 +75,86 @@ body .container{
     font-weight: 900;
 }
 
-.info li{
+.info li {
     list-style-type: none;
     padding: 0.5rem 0;
 }
 
-.info h1{
+.info h1 {
     font-size: 1.65rem;
-
 }
 
-.info h2{
+.info h2 {
     font-size: 1.2rem;
     margin-bottom: 0;
 }
 
-ul,li{
-    /* padding: 0; */
+ul,
+li {
+    padding: 0;
 }
 
-.extras{
+.extras {
     font-size: 1.2rem;
     padding: inherit 2rem;
     width: 80%;
 }
 
-#moving-header-container{
-    width: 100%;
-    overflow-x: hidden;
-}
-
-#welcome-header{
+#welcome-header {
     position: relative;
     font-family: 'Cascadia Mono ExtraLight';
     white-space: nowrap;
     color: rgb(137, 231, 226);
-    font-size: 2rem;
-    user-select: none;
+    font-size: 2.5rem;
+    /* Slightly larger header */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    /* Add text-shadow */
 }
 
-a{
+a {
     text-decoration: none;
-    color:rgb(255, 179, 39);
+    color: rgb(255, 179, 39);
+    transition: color 0.3s ease;
+    /* Smooth transition on hover */
+}
+
+a:hover {
+    color: #1abc9c;
+    /* Color change on hover */
 }
 
 #date-time {
     position: absolute;
     top: 0;
     right: 0;
-    padding: 5px 10px;
+    padding: 10px;
+    /* Increased padding */
     font-family: sans-serif;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
-    font-size: 2rem;
+    border-radius: 5px;
+    /* Rounded corners */
+    font-size: 1rem;
+    /* Font size for better readability */
 }
-  
+.tabs{
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    column-gap: 0.5rem;
+}
+
+.tablink {
+    border: none;
+    outline: none;
+    background-color: #67ac07;
+    color: white;
+    padding: 0.7rem 1.5rem;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.tabcontent{
+    align-self: flex-start;
+    margin-right: 12%;
+}

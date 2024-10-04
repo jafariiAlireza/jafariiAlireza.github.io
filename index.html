@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,15 +6,13 @@
     </head>
     <body>
         <div id="date-time"></div>
-        <div id="moving-header-container">
-            <h2 id="welcome-header">به صفحه شخصی مهندس علیرضا جعفری خوش آمدید</h2>
-        </div>
+        <h2 id="welcome-header">به صفحه شخصی مهندس علیرضا جعفری خوش آمدید</h2>
         <div class="container">
             <div class="badge">
                 <div class="avatar">
                     <img src="image/avatar.jpg" alt="عکس اصلی">
                 </div>
-                <div class="info">                   
+                <div class="info">
                     <ul>
                         <li><h1>مهندس علیرضا جعفری</h1></li>
                         <li><h2>فارغ التحصیل کارشناسی مهندسی برق -  گرایش کنترل و ابزاردقیق - دانشگاه صنعتی شیراز</h2></li>
@@ -22,76 +21,64 @@
                         <li><h2>دانشجوی کارشناسی ارشد مهندسی برق - گرایش سیستم های قدرت - دانشگاه صنعتی شیراز  </h2></li>                  
                         <li><h2> کارشناس تحلیل سیستم های انرژی - مرکز مطالعات انرژی و سیستم های قدرت - دانشگاه صنعتی شیراز   </h2></li>
                         <li><h2>  دستیار ویژه اساتید در برگزاری کلاس حل تمرین دروس پایه و تخصصی مهندسی برق در دانشگاه صنعتی شیراز </h2></li>
-                        
-                       
                     </ul>
                 </div>
             </div>
             <hr style="width: 80%;">
-            <div class="extras">
-                <h3>سوابق تحصیلی :</h3>
-                <ul>
-                    <li>دوران تحصیل کارشناسی :1399-1403</li>
-                    <li>دوران تحصیل کارشناسی ارشد : 1403تا کنون</li>
-                </ul>
+
+            <!-- Tabs for different sections -->
+            <div class="tabs">
+                <button class="tablink active" onclick="openTab(event, 'projects')">سوابق پروژه ها</button>
+                <button class="tablink" onclick="openTab(event, 'organization')">سوابق تشکیلاتی</button>
+                <button class="tablink" onclick="openTab(event, 'interests')">علایق</button>
+                <button class="tablink" onclick="openTab(event, 'contact')">راه های ارتباطی</button>
             </div>
-    
 
-
-            <div class="extras">
-                <h3>سوابق پروژه ها  :</h3>
+            <div id="projects" class="tabcontent">
+                <h3>سوابق پروژه ها :</h3>
                 <ul>
                     <li>طراحی کنترل کننده های PID </li>
                     <li>پروژه کارشناسی : بهینه سازی و پیش بینی قیمت بازار برق با استفاده از الگوریتم های هوشمند و کنترل فازی   </li>
                     <li>ممیزی انرژی برای دانشگاه صنعتی شیراز جهت کاهش هزینه مصرفی برق  </li>
                     <li>استاد کلاس حل تمرین دروس پایه : ریاضی 1 و ریاضی 2 - آمارواحتمال مهندسی و معادلات دیفرانسیل     </li>
                     <li>استاد کلاس حل تمرین دروس تخصصی مهندسی برق :مدار الکتریکی - مبانی مهندسی برق - الکترونیک 1 - الکترونیک صنعتی و ماشین های الکتریکی 1 </li>
-                    <li>طراحی و ساخت مدار تشخیص سطح اب در حوزه الکترونیک </li>
-                    <li>طراحی و ساخت مدار کنترل دما در حوزه الکترونیک </li>
-                    <li>طراحی و ساخت مدار دیمر در حوزه الکتونیک </li>
-                    <li>طراحی کنترل کننده هوشمند مبتنی بر منطق فازی برای کنترل فرآیند ماشین قالب تزریق </li>
-
                 </ul>
-                </div>
+            </div>
 
-            <div class="extras">
+            <div id="organization" class="tabcontent" style="display:none">
                 <h3>سوابق تشکیلاتی :</h3>
                 <ul>
                     <li>دو دوره عضویت به عنوان عضو اصلی در شورای صنفی رفاهی دانشجویان دانشگاه صنعتی شیراز </li>
                     <li>همیار اساتید راهنما در طرح روشنا در دانشگاه صنعتی شیراز جهت مشاوره به دانشجویان ورودی جدید </li>
                     <li>حضور در جلسات شورای فرهنگی دانشگاه صنعتی شیراز به عنوان نماینده دانشجویی </li>
-                     <li> دستیار ویژه اساتید در برگزاری کلاس حل تمرین دروس پایه و تخصصی مهندسی برق در دانشگاه صنعتی شیراز</li>
+                    <li> دستیار ویژه اساتید در برگزاری کلاس حل تمرین دروس پایه و تخصصی مهندسی برق در دانشگاه صنعتی شیراز</li>
                 </ul>
             </div>
-            <div class="extras">
+
+            <div id="interests" class="tabcontent" style="display:none">
                 <h3>علایق :</h3>
                 <ul>
                     <li>والیبال</li>
                     <li>فوتسال</li>
                     <li>فوتبال</li>
                     <li> پیاده روی و کوهنوردی</li>
+                    <li>رانندگی کردن </li>
                 </ul>
             </div>
 
-            <div class="extras contact-me">
+            <div id="contact" class="tabcontent" style="display:none">
                 <h3>راه های ارتباطی : </h3>
                 <ul>
-                    <li>
-                        شماره تماس : 
-                        <a href="tel:09015275997">09015275997</a>
-                    </li>
+                    <li><a href="tel:+989015275997">شماره تماس : 09015275997</a></li>
                     <li><a href="mailto:jafarialireza085@gmail.com">ادرس ایمیل: jafarialireza085@gmail.com</a></li>
-                    <li><a href="https://www.instagram.com/mr_alireza.jafari">آیدی صفحه اینستاگرام : mr_alireza.jafari</a></li>
-                    <li><a href="https://t.me/Mr_alirezajafari">آیدی تلگرام : Mr_alirezajafari</a></li>
-                    <li>و همچنین از طریق نرم افزار های داخلی  ایتا و بله </li>
-    
+                    <li><a href="https://www.instagram.com/mr_alireza.jafari">آیدی صفحه اینستاگرام : @ mr_alireza.jafaria</a></li>
+                    <li><a href="https://t.me/Mr_alirezajafari">آیدی تلگرام : @Mr_alirezajafari</a></li>
+                    <li>و همچنین از طریق نرم افزار های داخلی ایتا و بله </li>
+                    <li>مراجعه حضوری به دانشگاه صنعتی شیراز واقع در بلوار مدرس جنب ایستگاه مترو غدیر دانشکده مهندسی برق و الکترونیک </li>
                 </ul>
             </div>
-        
         </div>
-        <script type="text/javascript">
-            !function(){var i="z1LF0H",a=window,d=document;function g(){var g=d.createElement("script"),s="https://www.goftino.com/widget/"+i,l=localStorage.getItem("goftino_"+i);g.async=!0,g.src=l?s+"?o="+l:s;d.getElementsByTagName("head")[0].appendChild(g);}"complete"===d.readyState?g():a.attachEvent?a.attachEvent("onload",g):a.addEventListener("load",g,!1);}();
-          </script>
+        
         <script src="script.js" type="application/javascript"></script>
         <script id="jalali-library" onload="writeTime()" src="https://cdn.jsdelivr.net/npm/jalaali-js/dist/jalaali.min.js"></script>
     </body>
