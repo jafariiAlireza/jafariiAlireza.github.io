@@ -55,6 +55,8 @@ function openTab(evt, tabName) {
 
     document.getElementById(tabName).style.display = "block";
     evt.currentTarget.className += " active";
+
+    
 }
 
 // Set default tab to open on page load

@@ -1,3 +1,14 @@
+@font-face {
+    font-family: 'Cascadia Mono ExtraLight';
+    src: url('fonts/CascadiaMono-ExtraLight.otf');
+}
+
+@font-face {
+    font-family: 'B Nazanin';
+    src: url('fonts/BNazanin.woff');
+}
+
+
 * {
     box-sizing: border-box;
     font-family: 'B Nazanin', sans-serif;
@@ -30,18 +41,37 @@ body .container {
     /* Added box-shadow */
 }
 
-@media (max-width: 900px) {
+@media(-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
     .badge {
         flex-wrap: wrap;
+        width: 90% !important;
     }
 
     .badge>* {
-        width: 90% !important;
+        width: 100% !important;
+    }
+
+    body {
+        width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    body .container {
+        width: 100%;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .badge .avatar {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
     }
 }
 
 .badge {
-    width: 85%;
+    width: 95%;
     direction: rtl;
     display: flex;
     justify-content: center;
@@ -69,7 +99,8 @@ body .container {
 
 .badge .info {
     width: 45%;
-    padding-right: 2rem;
+    padding-right: 1.5rem;
+    padding-left: 2rem;
     padding-top: 1rem;
     font-size: 1.1rem;
     font-weight: 900;
@@ -102,7 +133,7 @@ li {
 
 #welcome-header {
     position: relative;
-    font-family: 'Cascadia Mono ExtraLight';
+    font-family: 'B Nazanin', 'Cascadia Mono ExtraLight';
     white-space: nowrap;
     color: rgb(137, 231, 226);
     font-size: 2.5rem;
@@ -137,7 +168,8 @@ a:hover {
     font-size: 1rem;
     /* Font size for better readability */
 }
-.tabs{
+
+.tabs {
     width: 80%;
     display: flex;
     justify-content: start;
@@ -153,11 +185,18 @@ a:hover {
     border-radius: 5px;
     font-size: 1rem;
 }
-.tablink:hover, .tablink.active{
+
+.tablink:hover,
+.tablink.active {
     background-color: #932264;
 }
 
-.tabcontent{
+.tabcontent {
     align-self: flex-start;
     margin-right: 12%;
+}
+
+#moving-header-container {
+    width: 100%;
+    overflow-x: hidden;
 }
