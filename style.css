@@ -147,11 +147,14 @@ a:hover {
 .tablink {
     border: none;
     outline: none;
-    background-color: #67ac07;
+    background-color: #acac07;
     color: white;
     padding: 0.7rem 1.5rem;
     border-radius: 5px;
     font-size: 1rem;
+}
+.tablink:hover, .tablink.active{
+    background-color: #932264;
 }
 
 .tabcontent{
