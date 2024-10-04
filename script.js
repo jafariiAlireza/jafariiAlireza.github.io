@@ -59,6 +59,4 @@ function openTab(evt, tabName) {
     
 }
 
-// Set default tab to open on page load
-document.getElementById("projects").style.display = "block";
 
